@@ -13,9 +13,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
             integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 <!--    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>z
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
     <script type="text/javascript" src="assets/ko/index.js"></script>
     <script type="text/javascript" src="assets/index.js"></script>
+    <script type="text/javascript" src="assets/form.js"></script>
+
+
     <style>
         .active{
             color: red;
@@ -70,14 +73,21 @@
 
         </div>
     </div>
-    <form action="">
-
-
-        
+    <br><br>
+    <form action="form.php" id="test-form">
+        <input type="text"  id="myinput" name="text_input" placeholder="podaj tekst">
+        <input type="number" id="myinputtwo" name="number_input" placeholder="podaj liczbe">
+        <input type="text" name="text_input_two" placeholder="podaj teks 2">
+        <input type="text" name="number_input_two" placeholder="podaj liczbe 2">
+        <input required>
+        <input type="submit" value="wyślij">
     </form>
 
 
 </div>
+
+
+<script src="assets/jq-validate/jquery.validate.js"></script>
 <script type="text/javascript">
 var mainTable = $('#mainTable');
 var self = $(this);
@@ -86,29 +96,28 @@ $(mainTable).on('click',function (e) {
     // $(this).bootstrapTable('toggleView');
 });
 
-
 $(mainTable).bootstrapTable({
     onClickRow: function (row, $element, field) {
 
             console.log($element);
 
             addTestClass($element);
-        deleteTest($element);
+            // deleteTest($element);
     }
 });
 
-
  function addTestClass ($element) {
      $element.toggleClass('active')
+}
+// function deleteTest($element){
+//     mainTable.bootstrapTable('remove');
+// }
 
-}
-function deleteTest($element){
-     console.log(mainTable);
-     self.mainTable.bootstrapTable('remove');
-}
-deleteTest(null)
+
 
 </script>
+
+
 
 </body>
 </html>

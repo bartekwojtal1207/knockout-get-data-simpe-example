@@ -1,0 +1,23 @@
+{
+  "name": "knockout-get-data-simpe-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartekwojtal1207/knockout-get-data-simpe-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bartekwojtal1207/knockout-get-data-simpe-example/issues"
+  },
+  "homepage": "https://github.com/bartekwojtal1207/knockout-get-data-simpe-example#readme",
+  "dependencies": {
+    "jquery-validation": "^1.17.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
