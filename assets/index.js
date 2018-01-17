@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     var Bartek2 = Person.name("bartek2");
     var Bartek3 =  Person.name("bartek3");
 
-    var arrayName = [Bartek, Bartek2, Bartek3];
+
 
 
     ko.applyBindings({
@@ -34,20 +34,32 @@ document.addEventListener("DOMContentLoaded", function (e) {
             $('#results').append( li );
         })
     }
+    var nowy = {
+      elo: 'siema',
+      witam: 'mordo'
+    };
+    var arrayName = [nowy.elo, nowy.witam];
 
+$('.buttonAjax').on('click', function (e) {
+console.log('klik');
 
     $.ajax({
         method: "POST",
-        url: "index.php",
-        data: arrayName
-        })
-        .done(function(  ) {
+        url: "./form.php",
+        data: nowy
+    }).done(function( data ) {
             testAjax();
+            console.log(data);
             console.log('success');
+    }).fail(function() {
+        alert( "error" );
+    });
 
-        }).fail(function() {
-            alert( "error" );
-        });
+
+
+
+});
+
 
 
 

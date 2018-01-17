@@ -74,14 +74,13 @@
         </div>
     </div>
     <br><br>
-    <form action="form.php" id="test-form">
-        <input type="text"  id="myinput" name="text_input" placeholder="podaj tekst">
-        <input type="number" id="myinputtwo" name="number_input" placeholder="podaj liczbe">
+    <form action="form.php" id="test-form" method="post">
         <input type="text" name="text_input_two" placeholder="podaj teks 2">
         <input type="text" name="number_input_two" placeholder="podaj liczbe 2">
         <input required>
         <input type="submit" value="wyślij">
     </form>
+    <button href="form.php" role="button" class="active buttonAjax">ajax</button>
 
 
 </div>
