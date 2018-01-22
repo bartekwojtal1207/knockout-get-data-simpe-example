@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 
     var ul = $('.ul-class');
-    console.log(ul);
-
 
     var Person = {
        name : function(name)
@@ -40,6 +38,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
     };
     var arrayName = [nowy.elo, nowy.witam];
 
+console.log('sss');
+// console.log( );
+    function addTableRow(elo, witam) {
+        $('#mainTable tbody tr:last').after('<tr><td>'+ elo +'</td><td>'+ witam+'</td><td>'+ witam +'</td></tr>');
+    };
+
+
+
 $('.buttonAjax').on('click', function (e) {
 console.log('klik');
 
@@ -48,14 +54,13 @@ console.log('klik');
         url: "./form.php",
         data: nowy
     }).done(function( data ) {
-            testAjax();
             console.log(data);
             console.log('success');
+        addTableRow('wojtek', 'spoko')
+        // $('#mainTable tbody tr:last').after('<tr> <td>"costam"</td> <td>data.witam</td> </tr>');
     }).fail(function() {
         alert( "error" );
     });
-
-
 
 
 });

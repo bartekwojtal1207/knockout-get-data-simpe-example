@@ -77,7 +77,7 @@
     <form action="form.php" id="test-form" method="post">
         <input type="text" name="text_input_two" placeholder="podaj teks 2">
         <input type="text" name="number_input_two" placeholder="podaj liczbe 2">
-        <input required>
+        <input required type="text" name="number_input_last" placeholder="ostatnie" >
         <input type="submit" value="wyślij">
     </form>
     <button href="form.php" role="button" class="active buttonAjax">ajax</button>
