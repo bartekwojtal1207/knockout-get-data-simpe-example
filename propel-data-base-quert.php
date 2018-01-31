@@ -1,7 +1,20 @@
-$countryCode = 'ru';
-$countries = \CountryQuery::create()
-->addAsColumn('order_field', "CASE WHEN code = '$countryCode' THEN 1 ELSE 0 END")
-->select(array('Id', 'Name', 'Code'))
-->orderBy('order_field', \Criteria::DESC)
-->orderById(\Criteria::ASC)
-->find();
+class NewController {
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+}
