@@ -1,0 +1,73 @@
+    /* html !<div class='test'>
+
+  <ul>
+                    <li>Ekran: 5,65"</li>
+                    <li> Kirin 659 (4 rdzenie, 2,36 GHz, Cortex A53 + 4 rdzenie, 1,70 GHz, Cortex A53)</li>
+                    <li>Pamiêæ: 32 GB</li>
+                    <li>System: Android 8.0 Oreo</li>
+                    <li>Aparat: 13.0 + 2.0 Mpix - ty³, 8.0 Mpix - przód</li>
+                    <li>Bateria: Litowo-jonowa 3000 mAh</li>
+                        <li class="list-unstyled">
+            <a href="#specification" class="js-scroll-top text-faded" data-scroll-options="{ &quot;target&quot; : &quot;#specification&quot; }">Zobacz wiêcej szczegó³ów</a>
+        </li>
+            </ul>
+  <div class='twoDiv'>
+
+
+
+  </div>
+
+
+</div>
+
+
+csss !!!!
+
+
+.test{
+  background-color: red;
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+}
+ul{
+  overflow: hidden;
+}
+.twoDiv{
+  background-color: green;
+  height: 400px;
+  width: 100%;
+}
+
+
+
+///
+jquery
+var testHeight = $('.test').height();
+var ulHeight = $('ul').height();
+var firstLi = $('li').first().height();
+var seccondLi = $('li').first().next().height();
+var resume = firstLi + seccondLi;
+var twoHeight = $('.twoDiv').height();
+console.log(resume);
+console.log(firstLi + twoHeight);
+
+if ((ulHeight + twoHeight) > testHeight ) {
+
+		if ((resume + twoHeight) >testHeight ) {
+    console.log('JEST JETS ');
+    	if((firstLi + twoHeight) > testHeight){
+      	console.log('JEST JEST JEST');
+        $('ul').css('height', 0)
+      }else {
+      	console.log('jest jest nie ');
+        $('ul').css('height',firstLi )
+      }
+
+
+    }else {
+			console.log(resume + twoHeight);
+      $('ul').css('height', resume);
+    }
+
+}
